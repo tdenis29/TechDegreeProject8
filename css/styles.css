@@ -5,17 +5,20 @@
 /* Layout/Mobile/Main Styles */
 body {
 background-color: whitesmoke;
+margin: 0 auto;
 }
 main {
  width: 100%;
 }
+
 .card {
  width: 90%;
  margin: 0 auto;
  display: flex;
  align-items: center;
- margin: 1em auto;
+ margin: 1em;
  background-color: white;
+ border: solid 2px lightgrey;
 }
 
 .avatar {
@@ -26,5 +29,42 @@ main {
 }
 
 .text-container{
-    text-align: center;
+padding-left: 1em;
+}
+h2 {
+    margin: .2em 0;
+}
+.email {
+    margin: .2em 0;
+    color: grey;
+}
+.address {
+    margin: .2em 0;
+    color: grey;
+}
+
+/* Med Queries */
+
+@media (min-width: 768px) {
+    .grid-container {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;    
+    }
+	.card {
+        width:  40%;
+        padding: 1em;
+    }
+}
+
+
+/* Desktop View */
+
+@media (min-width: 1024px) {
+	.card {
+        width: 25%;
+    }
+}
+body {
+    max-width: 1280px;
 }
