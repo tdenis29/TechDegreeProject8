@@ -1,3 +1,30 @@
+/* Modal */
 .hidden {
     display: none;
+}
+/* Layout/Mobile/Main Styles */
+body {
+background-color: whitesmoke;
+}
+main {
+ width: 100%;
+}
+.card {
+ width: 90%;
+ margin: 0 auto;
+ display: flex;
+ align-items: center;
+ margin: 1em auto;
+ background-color: white;
+}
+
+.avatar {
+    border-radius: 50%;
+    padding: .5em;
+    height: 7em;
+    width: 7em;
+}
+
+.text-container{
+    text-align: center;
 }
