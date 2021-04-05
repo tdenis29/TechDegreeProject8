@@ -1,14 +1,15 @@
 /* Modal */
-.hidden {
-    display: none;
-}
+
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(100, 100, 100, 0.4)
+    background: rgba(100, 100, 100, 0.4);
+    display: none;
+    z-index: 1;
+    
     }
     .modal {
         width: 375px;
@@ -19,6 +20,8 @@
         border: 1px solid #778;
         border-radius: 5px;
         padding: 30px 20px;
+        z-index: 1;
+        
         }
         .modal-close {
             position: absolute;
@@ -46,28 +49,37 @@ main {
  margin: 1em;
  background-color: white;
  border: solid 2px lightgrey;
+ 
 }
 
 .avatar {
     border-radius: 50%;
     padding: .5em;
-    height: 7em;
-    width: 7em;
+    height: 5em;
+    width: 5em;
+   
 }
 
 .text-container{
 padding-left: 1em;
+
+
 }
+
 h2 {
     margin: .2em 0;
+   
 }
 .email {
     margin: .2em 0;
     color: grey;
+    
+    
 }
 .address {
     margin: .2em 0;
     color: grey;
+  
 }
 
 /* Med Queries */

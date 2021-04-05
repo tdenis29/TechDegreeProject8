@@ -14,7 +14,8 @@ fetch(urlAPI)
 // parse to json
 .then(response => response.json())
 // parse to data
-.then(data => data.results)
+.then(data => employees = data.results)
+// Data to save to aaray
 // pass control to display employes function to write html
 .then(displayEmployees)
 // error handler
@@ -22,7 +23,7 @@ fetch(urlAPI)
 
 // Employee HTML
 function displayEmployees(employeeData) {
-    let employees = employeeData
+    let employees = employeeData;
     let employeeHTML = "";
     employees.forEach((employee, index) => {
         let name = employee.name;
@@ -50,21 +51,22 @@ function displayModal(index) {
     let { name, dob, phone, email, location: { city, street, state, postcode
     }, picture } = employees[index];
     let date = new Date(dob.date)
+    console.log(street)
     const modalHTML = `
-        <img class="avatar" src="${picture.large}" />
+        <img class="avatar" src="${picture.large}"/>
         <div class="text-container">
         <h2 class="name">${name.first} ${name.last}</h2>
         <p class="email">${email}</p>
-        <p class="address">${city}</p>
         <hr/>
         <p>${phone}</p>
-        <p class="address">${street}, ${state} ${postcode}</p>
+        <p class="address"> ${street.number} ${street.name}, ${city}, ${state}, ${postcode}</p>
         <p>Birthday:
         ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
         </div>
         `;
-    overlay.classList.remove("hidden");
+    
     modalContainer.innerHTML = modalHTML;
+    overlay.style.display = "block"
 }
 
 
@@ -74,7 +76,6 @@ gridContainer.addEventListener('click', e => {
     // make sure the click is not on the gridContainer itself
     if (e.target !== gridContainer) {
     // select the card element based on its proximity to actual element
-    
     const card = e.target.closest(".card");
     const index = card.getAttribute('data-index');
     displayModal(index);
@@ -83,5 +84,5 @@ gridContainer.addEventListener('click', e => {
 
     // Modal close
     modalClose.addEventListener('click', () => {
-        overlay.classList.add("hidden");
+        overlay.style.display = "none"
         });
