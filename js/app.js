@@ -91,7 +91,7 @@ gridContainer.addEventListener('click', e => {
 
 
 // Search BAR
-input.addEventListener("keydown", (e) => {
+input.addEventListener("keyup", (e) => {
     let search = input.value.toLowerCase();
     for (i = 0; i < cards.length; i++){
     let name = cards[i].querySelector('h2').textContent.toLowerCase();
