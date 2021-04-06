@@ -35,8 +35,9 @@ display: none;
     height: 100%;
     }
     .modal {
-        width: 375px;
-        margin: 15% auto auto;
+        width: 300px;
+        height: 400px;
+        margin: 10% auto auto;
         position: relative;
         text-align: center;
         background: #fff;
@@ -44,7 +45,14 @@ display: none;
         border-radius: 5px;
         padding: 30px 20px;
         z-index: 1;
-        
+        }
+        .modal-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            text-align: center;
         }
         .modal-close {
             position: absolute;
@@ -118,7 +126,7 @@ width: 90%;
 .text-container{
 padding-left: .5em;
 flex-wrap: wrap;
-text-align: left;
+
 }
 
 h2 {
