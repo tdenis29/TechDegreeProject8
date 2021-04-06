@@ -5,8 +5,8 @@ const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
-
-
+const input = document.querySelector("input");
+const cards = document.getElementsByClassName("card")
 // FETCH FUNC 
 
 // uses url variable to make a call
@@ -86,3 +86,15 @@ gridContainer.addEventListener('click', e => {
     modalClose.addEventListener('click', () => {
         overlay.style.display = "none"
         });
+
+
+
+input.addEventListener("keydown", (e) => {
+    let search = input.value.toLowerCase();
+    for (i = 0; i < cards.length; i++){
+    let name = cards[i].querySelector('h2').textContent.toLowerCase();
+    if (name.includes(search)) {
+        cards[i].style.display = '';
+    } else {
+        cards[i].style.display = 'none';
+    }}});
