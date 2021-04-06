@@ -116,19 +116,20 @@ width: 90%;
 }
 
 .text-container{
-padding-left: 1em;
+padding-left: .5em;
 flex-wrap: wrap;
-
+text-align: left;
 }
 
 h2 {
     margin: .2em 0;
     color: slategrey;
+    font-size: 1.25em;
 }
 .email {
     margin: .2em 0;
     color: grey;
-    font-size: .8em;
+    font-size: .9em;
     flex-wrap: wrap;    
 }
 .address {
