@@ -7,8 +7,7 @@ const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 const input = document.querySelector("input");
 const cards = document.getElementsByClassName("card");
-const next = document.getElementById('next');
-const prev = document.getElementById("prev")
+
 // FETCH FUNC 
 
 // uses url variable to make a call
