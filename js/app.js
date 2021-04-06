@@ -6,7 +6,9 @@ const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 const input = document.querySelector("input");
-const cards = document.getElementsByClassName("card")
+const cards = document.getElementsByClassName("card");
+const next = document.getElementById('next');
+const prev = document.getElementById("prev")
 // FETCH FUNC 
 
 // uses url variable to make a call
@@ -104,11 +106,23 @@ input.addEventListener("keydown", (e) => {
     let index = 1;
     showSlides(index);
     
-    // Next/previous controls
+    // Next controls
     function plusSlides(n) {
+        if(index === 11){
+         index = 0;
       showSlides(index += n);
+    } else {
+        showSlides(index += n)
     }
-    
+}
+    // Previous 
+    function minusSlides(n){
+        if (index === 0){
+            index = 11;
+            showSlides(index -= 1)
+        } else {
+        showSlides(index -= 1)
+    }}
     // Thumbnail image controls
     function currentSlide(n) {
       showSlides(index = n);
@@ -117,18 +131,4 @@ input.addEventListener("keydown", (e) => {
     function showSlides(n) {
       displayModal(index)
     }
-    //   var slides = document.getElementsByClassName("mySlides");
-    //   var dots = document.getElementsByClassName("demo");
-    //   var captionText = document.getElementById("caption");
-    //   if (n > slides.length) {slideIndex = 1}
-    //   if (n < 1) {slideIndex = slides.length}
-    //   for (i = 0; i < slides.length; i++) {
-    //     slides[i].style.display = "none";
-    //   }
-    //   for (i = 0; i < dots.length; i++) {
-    //     dots[i].className = dots[i].className.replace(" active", "");
-    //   }
-    //   slides[slideIndex-1].style.display = "block";
-    //   dots[slideIndex-1].className += " active";
-    //   captionText.innerHTML = dots[slideIndex-1].alt;
-    // }
+ 
