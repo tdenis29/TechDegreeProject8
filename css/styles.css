@@ -4,10 +4,18 @@ html {
 }
 header {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+
+}
+h1 {
+    color: grey;
+    font-size: 2rem;
+    text-align: center;
 }
 input {
-    width: 75%;
+    width: 50%;
     height: 2rem;
 }
 .hidden {
@@ -89,13 +97,12 @@ main {
 
 .card {
  width: 90%;
- margin: 0 auto;
  display: flex;
  align-items: center;
- margin: 1em;
+ margin: .5em; 
  background-color: white;
  border: solid 2px lightgrey;
- 
+ flex: 1 1 0;
 }
 
 .avatar {
@@ -108,7 +115,7 @@ main {
 
 .text-container{
 padding-left: 1em;
-
+flex-wrap: wrap;
 
 }
 
@@ -119,6 +126,7 @@ h2 {
 .email {
     margin: .2em 0;
     color: grey;
+    font-size: .8em;
     
     
 }
@@ -140,14 +148,18 @@ h2 {
         width:  40%;
         padding: 1em;
     }
+
+
+header {
+    display: flex;
+    flex-direction: row;
 }
-
-
+}
 /* Desktop View */
 
 @media (min-width: 1024px) {
 	.card {
-        width: 28%;
+        width: 25%;
     }
 }
 body {
