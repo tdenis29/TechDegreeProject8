@@ -15,7 +15,7 @@ h1 {
     text-align: center;
 }
 input {
-    width: 50%;
+    width: 40%;
     height: 2rem;
 }
 .hidden {
@@ -96,7 +96,7 @@ main {
 }
 
 .card {
- width: 90%;
+width: 90%;
  display: flex;
  align-items: center;
  margin: .5em; 
@@ -127,8 +127,7 @@ h2 {
     margin: .2em 0;
     color: grey;
     font-size: .8em;
-    
-    
+    flex-wrap: wrap;    
 }
 .address {
     margin: .2em 0;
@@ -142,14 +141,12 @@ h2 {
     .grid-container {
         display: flex;
         width: 100%;
-        flex-wrap: wrap;    
+        flex-wrap: wrap;
     }
 	.card {
-        width:  40%;
+        flex-basis: 40%;
         padding: 1em;
     }
-
-
 header {
     display: flex;
     flex-direction: row;
@@ -159,9 +156,9 @@ header {
 
 @media (min-width: 1024px) {
 	.card {
-        width: 25%;
+        max-width: 28%;
     }
-}
+
 body {
     max-width: 1280px;
-}
+}}
