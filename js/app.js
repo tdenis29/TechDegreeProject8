@@ -115,7 +115,7 @@ input.addEventListener("keydown", (e) => {
     }
     
     function showSlides(n) {
-      displayModal(index);
+      displayModal(index)
     }
     //   var slides = document.getElementsByClassName("mySlides");
     //   var dots = document.getElementsByClassName("demo");
