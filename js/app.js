@@ -88,7 +88,7 @@ gridContainer.addEventListener('click', e => {
         });
 
 
-
+// Search BAR
 input.addEventListener("keydown", (e) => {
     let search = input.value.toLowerCase();
     for (i = 0; i < cards.length; i++){
