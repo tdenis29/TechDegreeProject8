@@ -14,3 +14,7 @@ The Process
  
 3. There was a simple search bar which I re-used code from an earlier project. 
  <exampe>
+
+  The Summary
+  
+  This project was a good introduction to a develepors bread and butter which is receiving information from a server asynchronously and then formatting it into HTML to dynamically display on the page. My high point for the Tree
